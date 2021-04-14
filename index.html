@@ -1,69 +1,60 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-	<meta charset="UTF-8" />
-    <title>Eat the SWEET!</title>
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/fontfaces.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <meta charset='utf-8'>
+    <title>DOODLE JUMP</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <META HTTP-EQUIV='Content-Security-Policy' CONTENT="default-src 'self';script-src 'self' 'unsafe-inline' *.disqus.com a.disquscdn.com requirejs.org www.google-analytics.com; style-src 'self' 'unsafe-inline' a.disquscdn.com; img-src 'self' *; media-src 'self' ; frame-src disqus.com;">
     
-    <script src="scripts/modernizr.js"></script>
-    <script src="scripts/loader.js"></script>
-    <script type="text/javascript" src="scripts/mechanics/Player.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/Background.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/Particle.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/Cloud.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/Cookie.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/BackgroundCloud.js"></script>
-    <script type="text/javascript" src="scripts/mechanics/Main.js"></script>
-	<script type="text/javascript" src="scripts/mechanics/ShootingStar.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/layout.css'>
 </head>
-
 <body>
-	<div id="game">
-    	<div class="screen" id="main-menu">
-        	<h1 class="logo">EAT</h1> 
-            <h1 class="logo">the </h1>
-            <h1 class="logo">SWEET!</h1>
-            
-            <div id="border"></div>
-            
-            <div id="menu">
-            	<span class="button" id="play-game">Play!</span><br/>
-            	<span class="button" id="how-to-play">How to play</span>
-            </div>
+    <div id='body-container'>
+        <div id='pausePlay'>
+            <img src='images/pause.png'>            
         </div>
-        
-        <div class="screen" id="instructions">
-			<h2 id="top">How to PLAY (PC)</h2>
-            <p id="body">
-				<p>Pocky moves in the direction of your cursor - drag your mouse accordingly! To launch him initially, left-click your mouse.</p>
-				<p>The objective is to move Pocky along by making him bounce on clouds and advance further up into the sky. 
-				Your score is measured by how high you can go, plus the number of bonus goodies you feed him along the way.</p>
-				<p>Can you help Pocky reach the very top of the sky for his ultimate dream prize?</p>
-				<div class="column">
-				<img src="images/cookie.png" class="resize" alt=""> : 50 points<br />
-				<img src="images/candy.png" class="resize" alt=""> : 100 points<br />            
-				</div>
-				<div class="column">
-				<img src="images/cupcake.png" class="resize" alt=""> : 200 points<br />
-				<img src="images/star.png" class="resize" alt=""> : ???<br />
-				</div>
-								
-				<p id="clear">
-					To toggle the sound, press M.<br />
-					To quit playing, press the ESC key.<br />
-					To pause, press the SPACE BAR.<br />
-				</p>
-            </p>
-			<span id="back-button">Back</span>
-		</div>		
-        
-        <div class="screen" id="game-screen">
-        	<canvas id="canvas">GAME STUFF</canvas>
+        <div id='playagain'>
+            <img src='images/play-again-on.png'>
         </div>
-        <div class="screen" id="high-scores"></div>
-	</div>
-</body>
+        <canvas id='body-canvas'>
 
+        </canvas> 
+
+        
+    </div>
+    <div id='startpage'>
+            <img src='images/startPage.png'>
+            <div id='startplay'>
+                <img src='images/play-on.png'>
+            </div>
+
+            <div id='pcinstruction'>
+                <span> INSTRUCTIONS</span>
+                <span> LeftMove- 'A'</span>
+                <span> RightMove- 'D'</span>
+                <span> Shoot- 'Space'</span>
+            </div>
+            <div id='mobileinstruction'>
+                    <span> INSTRUCTIONS</span>
+                    <span> <-- 'Left Tilt'</span>
+                    <span> --> 'Right Tilt'</span>
+                    <span> Tap- 'Shoot'</span>
+                </div>
+    </div>
+    <div id='pause-container'>
+        <img src='images/pause-cover.png' alt='Pause Page'>
+        <div id='resume'>
+               <img src='images/resume.png'>
+        </div>
+    </div>
+    
+
+     
+    <script src='doodle.js'></script>
+    <script src='platform.js'></script>
+    <script src='obstacle.js'></script>
+    <script src='booster.js'></script>
+    <script src='bullet.js'></script>
+    <script src='script.js'></script>
+</body>
 </html>

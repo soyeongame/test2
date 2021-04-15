@@ -21,7 +21,7 @@ class Bullet{
         }
         else if(status=='isDoodle')
         {
-            this.context.fillStyle='green';
+            this.context.fillStyle='orange';
         }
         this.context.fill();
         this.context.stroke();

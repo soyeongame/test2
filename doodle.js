@@ -1,5 +1,5 @@
-const DOODLE_WIDTH=40;
-const DOODLE_HEIGHT=40;
+const DOODLE_WIDTH=70;
+const DOODLE_HEIGHT=68;
 
 
 

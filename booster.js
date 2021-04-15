@@ -4,8 +4,8 @@ class Booster{
         this.y=y;
         this.booster=booster;
         if(type==1 || type==2){
-        this.height=25;
-        this.width=50;
+        this.height=38;
+        this.width=90;
         }
         else if(type==4)
         {

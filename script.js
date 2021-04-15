@@ -85,6 +85,11 @@ class GAME
         this.status='isPlaying';
         this.animator;
         this.setUp();
+        this.input.mouse.capture = true;
+        this.mouseSprite = this.add.sprite(0,0);
+        this.mouseSprite.visible = false;
+        this.physics.arcade.enable(this.mouseSprite)
+        this.play.isRun = true;
     }
 
     setUp()
@@ -1360,6 +1365,11 @@ class GAME
             }
         }
 
+if(this.play.isRun){
+				this.physics.arcade.moveToPointer(this.mouseSprite, 60, this.input.activePointer, 200);
+				this.play.x = this.mouseSprite.x;
+			};
+
         if(this.drunkenMode==1)
         {
             //console.log('drawn');
@@ -1450,13 +1460,13 @@ function loadAssets(callback)
   
   //Audio loading.  
     AUDIOS.bullet = loadAudio('sounds/bullet.mp3');
-    AUDIOS.jump=loadAudio('sounds/jump.wav');
-    AUDIOS.monsterCrash=loadAudio('sounds/monster-crash.mp3');
+    AUDIOS.jump=loadAudio('sounds/jump.ogg');
+    AUDIOS.monsterCrash=loadAudio('sounds/monster-crash.ogg');
     AUDIOS.enemySiren=loadAudio('sounds/enemySound.mp3');
-    AUDIOS.trampSound=loadAudio('sounds/trampoline.mp3');
-    AUDIOS.springSound=loadAudio('sounds/spring_sound.wav');
+    AUDIOS.trampSound=loadAudio('sounds/trampoline.wav');
+    AUDIOS.springSound=loadAudio('sounds/spring_sound.ogg');
     AUDIOS.fakePlatform=loadAudio('sounds/lomise.mp3');
-    AUDIOS.obstacleCrash=loadAudio('sounds/obstacleCrash.mp3');
+    AUDIOS.obstacleCrash=loadAudio('sounds/obstacleCrash.ogg');
     AUDIOS.jetPack=loadAudio('sounds/jetpack.mp3');
 
 
@@ -1477,7 +1487,7 @@ function loadAssets(callback)
   SPRITES.healthReinstate=loadSprite('images/potion_green_notap.png');
   SPRITES.greenPlatform=loadSprite('images/green_platform.png');
   SPRITES.movingPlatform=loadSprite('images/moving_platform.png');
-  SPRITES.breakingPlatform=loadSprite('images/breakanimate.png');
+  SPRITES.breakingPlatform=loadSprite('images/breaking_animation.png');
   SPRITES.yellowPlatform=loadSprite('images/yellow_platform.png');
   numAssets = assetsStillLoading;
   //console.log(numAssets);
@@ -1491,3 +1501,46 @@ loadAssets(() => {
 
 });
 
+// When true, moving the mouse draws on the canvas
+let isDrawing = false;
+let x = 0;
+let y = 0;
+
+const myPics = document.getElementById('myPics');
+const context = myPics.getContext('2d');
+
+// event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
+
+// Add the event listeners for mousedown, mousemove, and mouseup
+myPics.addEventListener('mousedown', e => {
+  x = e.offsetX;
+  y = e.offsetY;
+  isDrawing = true;
+});
+
+myPics.addEventListener('mousemove', e => {
+  if (isDrawing === true) {
+    drawLine(context, x, y, e.offsetX, e.offsetY);
+    x = e.offsetX;
+    y = e.offsetY;
+  }
+});
+
+window.addEventListener('mouseup', e => {
+  if (isDrawing === true) {
+    drawLine(context, x, y, e.offsetX, e.offsetY);
+    x = 0;
+    y = 0;
+    isDrawing = false;
+  }
+});
+
+function drawLine(context, x1, y1, x2, y2) {
+  context.beginPath();
+  context.strokeStyle = 'black';
+  context.lineWidth = 1;
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
+  context.stroke();
+  context.closePath();
+}

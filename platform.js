@@ -1,6 +1,6 @@
 
-const PLATFORM_WIDTH=50;
-const PLATFORM_HEIGHT=15;
+const PLATFORM_WIDTH=90;
+const PLATFORM_HEIGHT=25;
 
 class Platform{
     constructor(x,y,cxt,type){
@@ -40,7 +40,7 @@ class Platform{
         if(this.platformType==3)
         {
         //this.context.fillStyle='red';
-        this.context.drawImage(this.breakingPlatform,this.index*50,0,50,28,this.xPosition,this.yPosition,this.platformWidth,28);
+        this.context.drawImage(this.breakingPlatform,this.index*90,0,90,50,this.xPosition,this.yPosition,this.platformWidth,50);
 
         }
         if(this.platformType==4)

@@ -74,7 +74,7 @@ class GAME
         this.startTime=0;             //variable for storing  started new Date()
         this.currentTime=0;           //variable for storing  current new Date()
         this.loopCount=0;             //flag for checking production of enemy bulet one in every defined time period.
-        this.chance=3;                //chance to be hit by enemy's bullet for the doodle before dying.
+        this.chance=5;                //chance to be hit by enemy's bullet for the doodle before dying.
         this.drunkenMode=0;          //flag for checking drunken mode
         this.doodleClicked=0;       //flag for checkin screen tapped or not in mobile game play.
         this.tapTimer;             //variable to store time when the screen is tapped.
@@ -983,7 +983,7 @@ class GAME
         this.startTime=0;
         this.currentTime=0;
         this.loopCount=0;
-        this.chance=3;
+        this.chance=5;
         this.drunkenMode=0;
         pausePlay.style.display='block';
         this.theta=[]; 
@@ -1310,7 +1310,7 @@ class GAME
             this.drunkenMode=1;
         }
         else if(value==2){
-            this.chance=3;
+            this.chance=5;
            
         }
 

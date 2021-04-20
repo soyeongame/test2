@@ -1,1 +1,0 @@
-cr. https://github.com/iPel/NS-SHAFT

@@ -489,8 +489,7 @@
       var ImageSets = [{
         id: 'riichi',
         type: 'SVG',
-        name: 'Riichi',
-        url: 'https://github.com/FluffyStuff/riichi-mahjong-tiles'
+        name: 'riichi',       
       }, {
         id: 'uni',
         type: 'SVG',
@@ -517,9 +516,9 @@
         name: 'Black',
         url: 'https://commons.wikimedia.org/wiki/Category:Unicode_1F000-1F02F_Mahjong_Tiles'
       }, {
-        id: 'gleitz',
+        id: 'SNS-2018',
         type: 'PNG',
-        name: 'Gleitz',
+        name: 'SNS 2018',
         url: 'https://github.com/gleitz/mahjong/tree/master/public/img/tiles'
       }, {
         id: 'recri',
@@ -546,7 +545,7 @@
         type: 'PNG',
         name: 'produce101'
       }];
-      var ImageSetDefault = 'riichi';
+      var ImageSetDefault = 'produce101';
       var TILES = [['t_do1', 't_do1', 't_do1', 't_do1'], ['t_do2', 't_do2', 't_do2', 't_do2'], ['t_do3', 't_do3', 't_do3', 't_do3'], ['t_do4', 't_do4', 't_do4', 't_do4'], ['t_do5', 't_do5', 't_do5', 't_do5'], ['t_do6', 't_do6', 't_do6', 't_do6'], ['t_do7', 't_do7', 't_do7', 't_do7'], ['t_do8', 't_do8', 't_do8', 't_do8'], ['t_do9', 't_do9', 't_do9', 't_do9'], ['t_ch1', 't_ch1', 't_ch1', 't_ch1'], ['t_ch2', 't_ch2', 't_ch2', 't_ch2'], ['t_ch3', 't_ch3', 't_ch3', 't_ch3'], ['t_ch4', 't_ch4', 't_ch4', 't_ch4'], ['t_ch5', 't_ch5', 't_ch5', 't_ch5'], ['t_ch6', 't_ch6', 't_ch6', 't_ch6'], ['t_ch7', 't_ch7', 't_ch7', 't_ch7'], ['t_ch8', 't_ch8', 't_ch8', 't_ch8'], ['t_ch9', 't_ch9', 't_ch9', 't_ch9'], ['t_ba1', 't_ba1', 't_ba1', 't_ba1'], ['t_ba2', 't_ba2', 't_ba2', 't_ba2'], ['t_ba3', 't_ba3', 't_ba3', 't_ba3'], ['t_ba4', 't_ba4', 't_ba4', 't_ba4'], ['t_ba5', 't_ba5', 't_ba5', 't_ba5'], ['t_ba6', 't_ba6', 't_ba6', 't_ba6'], ['t_ba7', 't_ba7', 't_ba7', 't_ba7'], ['t_ba8', 't_ba8', 't_ba8', 't_ba8'], ['t_ba9', 't_ba9', 't_ba9', 't_ba9'], ['t_se_spring', 't_se_summer', 't_se_fall', 't_se_winter'], ['t_wi_north', 't_wi_north', 't_wi_north', 't_wi_north'], ['t_wi_south', 't_wi_south', 't_wi_south', 't_wi_south'], ['t_wi_east', 't_wi_east', 't_wi_east', 't_wi_east'], ['t_wi_west', 't_wi_west', 't_wi_west', 't_wi_west'], ['t_fl_bamboo', 't_fl_chrysanthemum', 't_fl_orchid', 't_fl_plum'], ['t_dr_green', 't_dr_green', 't_dr_green', 't_dr_green'], ['t_dr_white', 't_dr_white', 't_dr_white', 't_dr_white'], ['t_dr_red', 't_dr_red', 't_dr_red', 't_dr_red']];
       var TILES_INFO = {
         suits: [{

@@ -230,20 +230,20 @@ const Backgrounds = [
     { img: 'HWAA.jpg', name: 'HWAA' }
 ];
 const ImageSets = [
-    { id: 'riichi', type: 'SVG', name: 'Riichi', url: 'https://github.com/FluffyStuff/riichi-mahjong-tiles' },
+    { id: 'riichi', type: 'SVG', name: 'riichi' },
     { id: 'uni', type: 'SVG', name: 'Uni', url: 'https://commons.wikimedia.org/wiki/Category:Unicode_1F000-1F02F_Mahjong_Tiles_(color)' },
     { id: 'bzhmaddog', type: 'SVG', name: 'Bzhmaddog', url: 'https://github.com/bzhmaddog/html5-mahjong-solitaire/tree/master/res/skins/default/tiles' },
     { id: 'cheshire137', type: 'SVG', name: 'Cheshire', url: 'https://github.com/cheshire137/Mahjong/tree/master/app/assets/images/tiles' },
     { id: 'recri2', type: 'SVG', name: 'Recri', url: 'https://github.com/recri/mahjong' },
     { id: 'unib', type: 'SVG', name: 'Black', url: 'https://commons.wikimedia.org/wiki/Category:Unicode_1F000-1F02F_Mahjong_Tiles' },
-    { id: 'gleitz', type: 'PNG', name: 'Gleitz', url: 'https://github.com/gleitz/mahjong/tree/master/public/img/tiles' },
+    { id: 'SNS-2018', type: 'PNG', name: 'SNS 2018' },
     { id: 'recri', type: 'PNG', name: 'Recri', url: 'https://github.com/recri/mahjong' },
     { id: 'open-fruits', type: 'PNG', name: 'Fruits', url: 'https://github.com/xunkar/open-mahjong/tree/master/resources/tiles/fruits' },
     { id: 'picasso', type: 'PNG', name: 'Picasso', url: 'http://star.physics.yale.edu/~ullrich/software/SolitaireMahjong/' },
     { id: 'modern', type: 'PNG', name: 'Modern', url: 'http://star.physics.yale.edu/~ullrich/software/SolitaireMahjong/' },
     { id: 'produce101', type: 'PNG', name: 'produce101' }
 ];
-const ImageSetDefault = 'riichi';
+const ImageSetDefault = 'produce101';
 const TILES = [
     ['t_do1', 't_do1', 't_do1', 't_do1'],
     ['t_do2', 't_do2', 't_do2', 't_do2'],
